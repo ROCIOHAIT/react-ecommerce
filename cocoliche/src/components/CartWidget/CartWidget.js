@@ -1,5 +1,5 @@
-/* import React from 'react';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+ import React from 'react';
+ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 const CartWidget = () => {
@@ -9,4 +9,4 @@ const CartWidget = () => {
         </div>
     )
 }
-export default CartWidget */
+export default CartWidget 
