@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import {AppBar, Toolbar, Button} from '@mui/material';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar =() => {
     return (
@@ -9,7 +10,7 @@ const NavBar =() => {
           
         <Toolbar>
           <div className='container-logo'>
-              <img src="./logo.jpeg"/>
+              <img src="./logo.jpeg" alt="logo"/>
           </div>    
           <ul>
               <li>
@@ -27,6 +28,7 @@ const NavBar =() => {
           </ul>
             
           <Button color="inherit">Login</Button>
+          <CartWidget />
         </Toolbar>
       </AppBar>
     )
