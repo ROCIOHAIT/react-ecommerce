@@ -8,7 +8,7 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 
 function App() {
-  //let test = "Coder"
+ 
   let styleCustom = {
     color : '#C7CF99'
   }
@@ -32,6 +32,7 @@ function App() {
         
         <ItemList information={"informacion sobre el producto"}/>
         <ItemCount></ItemCount>
+        
       </Grid>
      
     </div>

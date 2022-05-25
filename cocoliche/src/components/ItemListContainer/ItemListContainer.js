@@ -10,12 +10,12 @@ const ItemList = (props) => {
         <div className="item-list">
             <h2>Velas de Soja</h2>
             <div>
-                <img src="cocoliche/public/product4.jpeg" alt="producto"/>
+                <img src={'./${image}'} alt={"producto"}/>
             </div>
             <p>{props.information}</p>
             <span> $2000</span>
         </div>
-        
+
         </CardContent>
         </Card>
     )
