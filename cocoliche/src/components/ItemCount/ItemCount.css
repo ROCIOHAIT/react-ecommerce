@@ -1,0 +1,9 @@
+.counts-items{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+    margin-bottom: 10px;
+}

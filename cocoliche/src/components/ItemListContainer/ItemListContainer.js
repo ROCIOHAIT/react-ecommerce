@@ -2,6 +2,7 @@ import React from "react"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
+
 const ItemList = (props) => {
     return (
         <Card>
@@ -13,8 +14,8 @@ const ItemList = (props) => {
             </div>
             <p>{props.information}</p>
             <span> $2000</span>
-
         </div>
+        
         </CardContent>
         </Card>
     )
