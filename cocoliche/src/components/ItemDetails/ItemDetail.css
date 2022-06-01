@@ -1,0 +1,8 @@
+.product-container{
+    width: 200%;
+    display: flex;
+    padding: 50px 60px;
+}
+.seccion1{
+    font-size: 30px;
+}

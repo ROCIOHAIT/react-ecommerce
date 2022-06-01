@@ -22,4 +22,11 @@ const productos = [
     },
 ]
 
+const products ={
+    title: "Velas de Soja",
+    price: 2000,
+    stock: 7,
+    id: 1
+}
 export default productos
+export { products }

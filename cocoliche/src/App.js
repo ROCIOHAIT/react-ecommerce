@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar'
 import ItemList from './components/ItemListContainer/ItemListContainer';
 import Grid from '@mui/material/Grid';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetails/ItemDetailContainer';
 import { useState, useEffect} from 'react';
 
 function App() {
@@ -38,23 +39,8 @@ function App() {
   return (
     <div className="App" style={styleCustom}>
       <NavBar/>
-      <h1 className='title'> Cocoliche Artesanias </h1>
-      <Grid container spacing={4}>
-        
-        <ItemList information={"informacion sobre el producto"}/>
-        <ItemCount></ItemCount>
-      </Grid>
-      <Grid container spacing={4}>
-        
-        <ItemList information={"informacion sobre el producto"}/>
-        <ItemCount></ItemCount>
-      </Grid>
-      <Grid container spacing={4}>
-        
-        <ItemList information={"informacion sobre el producto"}/>
-        <ItemCount></ItemCount>
-        
-      </Grid>
+      <ItemDetailContainer/>
+
      
     </div>
   );

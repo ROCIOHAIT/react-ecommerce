@@ -21,7 +21,7 @@ const ItemCount =({}) => {
         <button onClick={remove} disabled={count === 0}> - </button>
         <p>{count}</p>
         <button onClick={onAdd}> + </button>
-        <button onClick={count}> Comprar</button>
+        <button className='color-button' onClick={count}> Comprar</button>
      </div>
     )
 }
