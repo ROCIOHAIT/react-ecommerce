@@ -6,24 +6,24 @@ import CartWidget from '../CartWidget/CartWidget';
 const NavBar =() => {
     return (
         
-        <AppBar position="static" className='header'>
+        <AppBar position="static" className='header-primary'>
           
         <Toolbar>
           <div className='container-logo'>
-              <img src="./logo.jpeg" alt="logo"/>
+              <img src="Logo.jpeg" alt="logo"/>
           </div>    
-          <ul>
+          <ul className='header'>
               <li>
-                  <button disableRiple styles={{backgroundColor: '#C7CF99' }} className='navbar-button'>Home</button>
+                  <button disableRipple style={{backgroundColor: '#C7CF99' }} className='navbar__btn'>Home</button>
               </li>
               <li>
-                  <button>Nosotros</button>
+                  <button disableRipple style={{backgroundColor: '#C7CF99' }} className='navbar__btn'>Nosotros</button>
               </li>
               <li>
-                  <button>Productos</button>
+                  <button disableRipple style={{backgroundColor: '#C7CF99' }} className='navbar__btn'>Productos</button>
               </li>
               <li>
-                  <button>Contacto</button>
+                  <button disableRipple style={{backgroundColor: '#C7CF99' }} className='navbar__btn'>Contacto</button>
               </li>
           </ul>
             

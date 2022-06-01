@@ -13,15 +13,16 @@ const ItemCount =({}) => {
     setCount(count + 1)
     }}
     const remove = () => {
-    setCount(count - 1)}
+    setCount(count - 1)
+    }
 
     return(
-    <div className='counts-items'>
+     <div className='counts-items'>
         <button onClick={remove} disabled={count === 0}> - </button>
         <p>{count}</p>
         <button onClick={onAdd}> + </button>
-        <button onClick={count}> Comprar</button>
-    </div>
+        <button className='color-button' onClick={count}> Comprar</button>
+     </div>
     )
 }
 export default ItemCount

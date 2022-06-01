@@ -5,6 +5,26 @@
     width: 100%;
 }
 .header {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    width: 50%;
+    border-bottom: rgb(103, 99, 99);
+    list-style:none;
+    list-style-type:none;
+}
+.header-primary{
+    background: none !important;
+    border-bottom: 1px solid #ccc;
     background-color: #C7CF99;
-    color: #C7CF99;
+
+}
+
+.header-primary .header .navbar__btn{
+    /*position: relative;*/
+    /*transition: width 0.3s ease;*/
+    height: 30px;
+    background: black;
+    bottom: 5px;
+    border-radius: 20px;
 }
