@@ -4,6 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import {useState, useEffect} from 'react';
 import {productos} from './../Items/ItemList';
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
 
 
 const ItemList = ({productos}) => {
@@ -41,7 +44,8 @@ const ItemList = ({productos}) => {
                      products.map( ({productos}) =>{
                          return( 
                             <Grid item md={3}>
-                            <ItemList title={productos.title} image={productos.image} price={productos.price} stock={productos.stock}/>
+                              <ItemList title={productos.title} image={productos.image} price={productos.price} stock={productos.stock} id={productos.id}/>
+                              <Button> <Link to={'/Detalle/${id}'}> Ver Detalle del Producto</Link></Button>
                             </Grid>
                          )
                     })

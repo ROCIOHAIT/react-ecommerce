@@ -3,20 +3,23 @@ const productos = [
         title: "Velas de Soja",
         image: 'product4.jpeg',
         price: 2000,
+        category: 'Velas',
         stock: 7,
         id: 1
     },
     {
-        title: "Velas de Soja",
-        image: 'product4.jpeg',
+        title: "Mesitas infantiles",
+        image: 'producto3.jpeg',
         price: 2000,
+        category: 'Mesas',
         stock: 10,
         id: 2
     },
     {
-        title: "Velas de Soja",
-        image: 'product4.jpeg',
+        title: "Banquitos infantiles",
+        image: 'producto2.jpeg',
         price: 2000,
+        category: 'Banquitos',
         stock: 8,
         id: 3
     },
