@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { Paper, Typography, Grid} from '@mui/material';
 import { products } from "../Items/ItemList";
+import { Button} from '@mui/material';
+import { Link } from 'react-router-dom';
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
     console.log("data: ", data)
+    const [size, setSize] = useState('');
+    const [count, setCount] = useState(1)
+    const [showButton, setShowButton]= useState(false)
 const {description} = data;
     return (
         <div className="product-container">
@@ -24,6 +29,15 @@ const {description} = data;
             <h3>Descripción:</h3>
             
             <Typography variant="body1" margin="20px">{description}</Typography>
+            {showButton == false ?
+            <ItemCount>
+                    count={count}
+                    setShowButton={setShowButton}
+                    setCount={setCount}
+                </ItemCount>
+            :    
+            <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>
+                }
             </Paper>
         </div>
     )
