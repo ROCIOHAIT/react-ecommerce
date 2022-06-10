@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
 import './test.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
 import { useState, useEffect} from 'react';
 import Home from './pages/Home';
 import Detalle from './pages/Detalle';
 import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
+import { CartProvider } from './context/CartContext';
+
+
 
 function App() {
   const [producto, setProducts] = useState([])
-  let styleCustom = {
-    color : '#C7CF99'
-  }
+  
+  
 
   const getProducts =() => {
     return new Promise( (resolve, reject) =>{
@@ -38,7 +40,8 @@ function App() {
 
   return (
     <div className='App'>
-    <BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
         <NavBar/>
         <Routes>
             <Route path='/' element={<Home />}/>  
@@ -48,6 +51,7 @@ function App() {
             
         </Routes>
       </BrowserRouter>
+    </CartProvider> 
     </div>
   
         
