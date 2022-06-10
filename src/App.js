@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Detalle from './pages/Detalle';
 import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
-import { CartProvider } from './context/CartContext';
+import { CartProvider } from './components/Context/CartContext';
 
 
 
@@ -44,11 +44,10 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-            <Route path='/' element={<Home />}/>  
-            <Route path='/Nosotros' element={<Nosotros />} />
-            <Route path='/Detalle/:id' element={<Detalle />}/>  
-            <Route path='/Productos/:category' element={<Productos />}/>  
-            
+            <Route path='/' element={<Home />}></Route>  
+            <Route path='/Nosotros' element={<Nosotros />} ></Route>
+            <Route path='/Detalle/:id' element={<Detalle />}></Route>  
+            <Route path='/Productos/:category' element={<Productos />}></Route>      
         </Routes>
       </BrowserRouter>
     </CartProvider> 
