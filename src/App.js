@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Detalle from './pages/Detalle';
 import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
-import { CartProvider } from './context/CartContext';
+import { CartProvider } from './components/Context/CartContext'
 
 
 
