@@ -33,4 +33,5 @@ const CartProvider = ({children}) => {
 
     }
 
-export { CartContext, CartProvider }
+    export default CartContext
+    export { CartProvider }

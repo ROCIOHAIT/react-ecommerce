@@ -3,12 +3,14 @@ import './App.css';
 import './test.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Home from './pages/Home';
 import Detalle from './pages/Detalle';
 import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
-import { CartProvider } from './context/CartContext';
+import Cart from './pages/Cart';
+import { CartProvider } from './components/Context/CartContext';
+
 
 
 
@@ -48,6 +50,7 @@ function App() {
             <Route path='/Nosotros' element={<Nosotros />} />
             <Route path='/Detalle/:id' element={<Detalle />}/>  
             <Route path='/Productos/:category' element={<Productos />}/>  
+            <Route path='/cart' element={<Cart />} />
             
         </Routes>
       </BrowserRouter>
