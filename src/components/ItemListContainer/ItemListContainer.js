@@ -6,7 +6,8 @@ import {useState, useEffect} from 'react';
 import {productos} from './../Items/ItemList';
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import db from "../../Firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 
 const ItemList = ({productos}) => {
@@ -20,6 +21,7 @@ const ItemList = ({productos}) => {
         })
     }
     useEffect( () =>{
+        getProduct()
         getProducts()
         .then ( (response) =>{
             console.log("respuesta: ", response)
@@ -32,6 +34,16 @@ const ItemList = ({productos}) => {
             console.log("finally: finalizo ")
         })
     }, [])
+
+    const getProduct = async () => {
+        const prodSnapshot = await getDocs(Collection(db, "productos"));
+        const productList = prodSnapshot.docs.map((doc) => {
+            
+            
+            return doc.data()
+        })
+        return productList
+    }
 
         return (
             <Card>

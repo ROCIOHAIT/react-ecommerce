@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import  productos  from "../Items/ItemList"
 import './ItemDetail.css'
 import { useNavigate, useParams } from "react-router-dom"
+import { doc, getDoc } from 'firebase/firestore'
+import db from "../../Firebase"
 
 const ItemDetailContainer = () => {
     const { id } = useParams()
@@ -13,13 +15,22 @@ const ItemDetailContainer = () => {
 
 
     useEffect(()=>{
-        console.log("productFilter: ", productFilter)
-        if(productFilter === undefined){
-            navigate('/')
-        }else {
-            setProductos(productFilter)
-        }
+        getProduct()
+        .then( (prod) => {
+            console.log("Respuesta getProduct: ", prod)
+            setProduct(prod)
+        })
     }, [id])
+
+    const getProduct = async() => {
+        const docRef = doc(db, "productos", id)
+        const docSnaptshop = await getDoc(docRef)
+        console.log("docSnaptshop: ", docSnaptshop)
+        let product = docSnaptshop.data()
+        product.id = docSnaptshop.id
+        console.log("producto unico: ", product)
+        return product
+    }
 
     const productFilter = productos.find( (productos) => {
         return productos.id === id
