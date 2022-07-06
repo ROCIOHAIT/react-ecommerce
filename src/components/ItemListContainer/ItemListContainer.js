@@ -36,7 +36,7 @@ const ItemList = ({productos}) => {
     }, [])
 
     const getProduct = async () => {
-        const prodSnapshot = await getDocs(Collection(db, "productos"));
+        const prodSnapshot = await getDocs((db, "productos"));
         const productList = prodSnapshot.docs.map((doc) => {
             
             
